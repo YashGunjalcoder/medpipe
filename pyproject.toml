@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "medpipe"
+version = "0.1.0"
+description = "Agentic AI pipeline for end-to-end medical data inference (7 modular agents)."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Your Name" }]
+keywords = ["medical-ai", "agentic-ai", "healthcare", "ml-pipeline", "explainable-ai"]
+
+dependencies = [
+    "numpy>=1.26",
+    "pandas>=2.0",
+    "scikit-learn>=1.3",
+    "magika>=0.5",
+    "perpetual>=0.4",
+    "shap>=0.44",
+    "pyreadstat>=1.2",
+    "openpyxl>=3.1",
+]
+
+[project.optional-dependencies]
+# Production components for the paper's cloud/GPU paths.
+full = [
+    "transformers>=4.40",   # SapBERT header embeddings
+    "torch>=2.1",           # SapBERT / MedGemma / DETR
+    "lime>=0.2",            # LIME explanations
+]
+
+[project.scripts]
+medpipe = "medpipe.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["medpipe*"]
