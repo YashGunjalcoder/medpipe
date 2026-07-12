@@ -152,23 +152,7 @@ medpipe/
       model_inference.py        # Agent 7  (PerpetualBooster + SHAP)
 ```
 
-## For your resume
 
-Bullets you can back up by rerunning the CLI:
-
-- Built **medpipe**, a 7-agent end-to-end clinical ML pipeline (file detection →
-  PII anonymization → feature extraction → schema-aware model selection →
-  preprocessing → inference → SHAP explainability) with a CLI that runs on any
-  tabular dataset; cloud/GPU components (SapBERT, MedGemma, DETR, Google DLP/ADK)
-  abstracted behind swappable interfaces so it runs fully offline on CPU.
-- Implemented an **embedding-based model-selection agent** using cosine
-  similarity + greedy one-to-one header assignment (threshold 0.6); on the real
-  HOPE dataset it correctly matched the anxiety model (21/21 headers) and
-  rejected an unrelated gait model (2/12).
-- Integrated **Magika** (byte-level file detection, incl. recursive ZIP),
-  **PerpetualBooster** (gradient-boosted inference), and **SHAP** (per-prediction
-  top-10 feature attributions).
-- On 9,924 real palliative-care patients, achieved **F1 0.89 / ROC-AUC 0.88**
   with **5-fold CV accuracy 0.83 ± 0.01** predicting patient anxiety.
 
 Honest framing: this implements and runs a published framework on a public
