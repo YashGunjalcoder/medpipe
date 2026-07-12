@@ -155,7 +155,4 @@ medpipe/
 
   with **5-fold CV accuracy 0.83 ± 0.01** predicting patient anxiety.
 
-Honest framing: this implements and runs a published framework on a public
-dataset — describe it as *"implemented and validated the framework from
-[paper]"* rather than as original method research. That's both accurate and
-still strong.
+
